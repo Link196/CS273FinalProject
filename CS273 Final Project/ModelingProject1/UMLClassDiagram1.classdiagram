@@ -5,19 +5,19 @@
       <class Id="fd4b8d8b-53cb-4a09-ba9c-7d6a9f0955e8" name="Patients" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="8bd12e55-65a7-419f-ae20-fefe99fd5d99" />
         <ownedAttributesInternal>
-          <property Id="43ffee30-e0c0-4b33-a185-7c03466a7b20" name="string name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="43ffee30-e0c0-4b33-a185-7c03466a7b20" name="string name" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="b63b9880-108f-46e5-821c-8682f3f25b5f" />
           </property>
-          <property Id="7c900d6d-040e-4bc9-b1d4-857bb057febd" name="int TotalWait" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="7c900d6d-040e-4bc9-b1d4-857bb057febd" name="int TotalWait" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="d135b1c9-e1ed-4349-bc63-64cc268ec8ac" />
           </property>
-          <property Id="aca27d7a-cebe-4775-9135-1ff7318da93c" name="int timeTreated" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="aca27d7a-cebe-4775-9135-1ff7318da93c" name="int timeTreated" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="faf32523-3226-4af2-9467-21d4c2a5b5b2" />
           </property>
-          <property Id="5bb69f59-d219-4b04-9d06-2c94a7fafc9f" name="int arrivalTime" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="5bb69f59-d219-4b04-9d06-2c94a7fafc9f" name="int arrivalTime" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="11451e26-4531-45d1-9e58-5f926d86498f" />
           </property>
-          <property Id="476adc36-6e0c-4cb7-9bda-2c99bd1c671f" name="int depatureTime" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="476adc36-6e0c-4cb7-9bda-2c99bd1c671f" name="int depatureTime" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="2416b29e-82f1-4c44-becf-8bb61522f4d6" />
           </property>
         </ownedAttributesInternal>
@@ -33,6 +33,48 @@
           </operation>
           <operation Id="3f58cb41-524a-4a64-926b-04ef4b1309fb" name="void update" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="c8cdc828-47a0-4018-bc6a-c2385784c1a3" />
+          </operation>
+          <operation Id="270decb1-a943-435d-9538-008141498b5c" name="Patients" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="44399c8c-de66-4f23-9587-001f16691c69" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="acd0eb51-7331-4a1f-9d95-23a7529bec01" name="string name" direction="In" isUnique="false">
+                  <elementDefinition Id="5ef05106-fc16-467b-a776-7efc82a722ca" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="71f8580a-f603-4045-9d93-59ac6f8c191d" name="int getdepatureTime" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="16eb16ab-9089-4190-8828-ef37bd79e7f1" />
+          </operation>
+          <operation Id="d5ef196d-9387-49ad-99c1-6fc766e40ee0" name="int  setdepatureTime" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d51ccbf6-adae-465b-923f-70e269a24db2" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="af9ffea4-f428-4026-8ac7-e0cb84ce9b1c" name="int depaturetime" direction="In" isUnique="false">
+                  <elementDefinition Id="88c93f69-25a5-4bf2-abea-edc768ffe694" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="67ed69e5-1bff-4e60-bcd7-48659c78b20d" name="int setTimeTreated" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="823a8804-ea5e-4fa1-94a7-851e464db995" />
+          </operation>
+          <operation Id="a7e5b9db-fb79-4992-90f7-9787b7686d65" name="int setTotalWait" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="9b82ec84-3884-4bb2-9c7f-532356549ecd" />
+          </operation>
+          <operation Id="29c95bfc-45ad-4894-b6c1-d0393740c316" name="string getName" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e68a6599-464a-4dc7-b5a4-2aa4387bdcad" />
+          </operation>
+          <operation Id="16744306-5147-478d-87e4-091e91b57c24" name="string setName" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6bdecaa3-e39a-4e66-b863-132846f08b7c" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f2d8b6ea-70a4-4669-aa0d-7f4186bf5e85" name="string name" direction="In" isUnique="false">
+                  <elementDefinition Id="fec1d068-c147-4ada-b59a-622ae4002443" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -59,13 +101,13 @@
           </association>
         </targetEnds>
         <ownedAttributesInternal>
-          <property Id="8424148f-ffba-4772-8a60-3d2eba906e67" name="int timeTreated" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="8424148f-ffba-4772-8a60-3d2eba906e67" name="int timeTreated" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="4d59428f-c3e2-46d1-852f-2c560323141a" />
           </property>
-          <property Id="bab70c82-8bb1-445c-98db-f0a0c7d2acd0" name="int numTreated" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="bab70c82-8bb1-445c-98db-f0a0c7d2acd0" name="int numTreated" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="f5953d98-593d-494c-a2e6-c5a8f6451bf8" />
           </property>
-          <property Id="b61f1fa6-d961-47f0-b911-29f694c1a66b" name="intTreatmentTime" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="b61f1fa6-d961-47f0-b911-29f694c1a66b" name="intTreatmentTime" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="64aab6af-3ab8-4ec4-8b07-3d868c3f9080" />
           </property>
         </ownedAttributesInternal>
@@ -86,12 +128,12 @@
           <operation Id="eb3d8040-1e01-4bfa-b519-4f5ccc5794e1" name="int getNumTreated" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="00582f73-a83a-4401-9a36-0407401ba6a6" />
           </operation>
-          <operation Id="d41b3048-3dc0-4ae5-8af1-e3106f91b856" name="int setTimeTreated" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="d41b3048-3dc0-4ae5-8af1-e3106f91b856" name="int  setTimeTreated" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="2178140b-266e-4d76-8ca2-388c837f0af3" />
             <ownedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="64c060fa-861b-48d6-8e30-09aaee4260fc" name="int timeTreated" direction="In" isUnique="false">
-                  <elementDefinition Id="da62a2e4-fa81-4911-ad2f-fa9112f345e9" />
+                <parameter Id="33f801d5-dc5f-4b49-b995-bf90a0161cfe" name="int timeTreated" direction="In" isUnique="false">
+                  <elementDefinition Id="52d75b69-c8ec-407b-b0f9-7becb46c6c79" />
                 </parameter>
               </operationHasOwnedParameters>
             </ownedParameters>
@@ -102,6 +144,32 @@
               <operationHasOwnedParameters>
                 <parameter Id="a9283e88-1ad2-4e73-b1dd-753c5ac90a03" name="int treatmentTime" direction="In" isUnique="false">
                   <elementDefinition Id="af94b08b-909b-4bdc-a7a9-616c58075a89" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="28cd2da1-1edb-410a-be98-3b97ac7c0f68" name="int getTimeTreated" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3c934532-2dff-4d0f-8e40-c9d6cbdcdd08" />
+          </operation>
+          <operation Id="8b968333-f773-442a-a653-08e8aee6593c" name="int getTreatmentTime" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="99e52d2d-0a4e-43d9-83b9-f2a46a48a180" />
+          </operation>
+          <operation Id="40462252-ea4d-4fd1-a992-6023f4727295" name="int setNumTreated" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f421a3d3-b2f7-4fb5-b697-fda5013dfda0" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="14147e82-f7a9-4856-b978-d13e5e3bb1a9" name="int NumTreated" direction="In" isUnique="false">
+                  <elementDefinition Id="7cd40593-3b83-4e5e-b594-4f97ebb5870f" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="f4eb7255-77ab-4160-a1c8-e778fa737fdd" name="int setTreatmentime" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="fc98d872-5756-466c-948e-2c3f7cb713e7" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="1a7950df-cfb9-4c0c-902f-63a34bdb3b82" name="int treatmenTime" direction="In" isUnique="false">
+                  <elementDefinition Id="283bb7f9-c6fb-4a89-9a9b-52a4523ad681" />
                 </parameter>
               </operationHasOwnedParameters>
             </ownedParameters>
@@ -131,13 +199,13 @@
           </association>
         </targetEnds>
         <ownedAttributesInternal>
-          <property Id="9cfc12df-830f-449e-8fb5-c28e37cd06f0" name="int timeTreated" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="9cfc12df-830f-449e-8fb5-c28e37cd06f0" name="int timeTreated" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="ea419f88-6366-4ebd-8335-add784c1c398" />
           </property>
-          <property Id="616f61e3-a264-4f66-9433-ec2e160944af" name="int numTreated" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="616f61e3-a264-4f66-9433-ec2e160944af" name="int numTreated" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="a4f9380f-1d20-41b9-96aa-31154dc4abb3" />
           </property>
-          <property Id="98d9cedb-5f04-4b34-a240-d94b9b635941" name="int treatmentTime()" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="98d9cedb-5f04-4b34-a240-d94b9b635941" name="int treatmentTime" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="c998766d-f822-4660-a90f-6cae849e739c" />
           </property>
         </ownedAttributesInternal>
@@ -191,6 +259,32 @@
               <operationHasOwnedParameters>
                 <parameter Id="cc6397b7-18d9-4d10-9ab9-c4acbc8831a9" name="int treatmentTime" direction="In" isUnique="false">
                   <elementDefinition Id="eb65f31c-9cf0-47e8-8fa7-e32db9cf2018" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="1a5a8877-d2d9-4a3a-b05b-8bb3a49b38d0" name="int setNumTreated" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="18e3f272-d72a-4113-ab91-ce7b5b2314b1" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="1aed3aa7-cdc2-4595-bdf5-70567bd15849" name="int NumTreated" direction="In" isUnique="false">
+                  <elementDefinition Id="34c15df3-69c4-42dc-abaa-2fb415466c31" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="02383a8d-10ca-4b2b-a3e4-fe473fb22d05" name="int getTimeTreated" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="53548f07-d4dd-4bd2-b575-6c039227da51" />
+          </operation>
+          <operation Id="2f707e37-d3d4-4d3f-a7d7-bb4596a98172" name="int getTreatmentTime" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="31224161-b411-4f6a-b8d1-258402fe34b6" />
+          </operation>
+          <operation Id="41718e9c-7ddf-4870-94f3-a5b6c21cf63c" name="int setTreatmentTime" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1b4177c9-bb8a-4e3e-b73c-67d9b436a3c6" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="932e60e1-7742-4b69-aea6-d38bd9fcb37f" name="int TreatmentTime" direction="In" isUnique="false">
+                  <elementDefinition Id="cc9285b3-62a4-4e75-af83-4ae4e17506fe" />
                 </parameter>
               </operationHasOwnedParameters>
             </ownedParameters>
@@ -287,17 +381,17 @@
           </association>
         </targetEnds>
         <ownedOperationsInternal>
-          <operation Id="18e4d895-e28f-41b7-8ce4-c29ed0c1e7ef" name="void virtual treatPatient" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="18e4d895-e28f-41b7-8ce4-c29ed0c1e7ef" name="virtual void treatPatient" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="fd3f23ed-fb22-44e4-b717-864cc077819b" />
             <ownedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="2bea367b-ef00-45c7-a9b9-5b05c12e7bc5" name="Patient *p" direction="In" isUnique="false">
-                  <elementDefinition Id="c456ea3e-7118-4f73-944c-d9c58238f235" />
+                <parameter Id="1392f538-94ae-436b-ae3e-7bc52816a86e" name="Patient *p" direction="In" isUnique="false">
+                  <elementDefinition Id="483fdd80-5b45-44f7-9c7f-3877e1a7509a" />
                 </parameter>
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
-          <operation Id="c91aae5d-2719-44bd-852f-e20fab103b48" name="void update" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="c91aae5d-2719-44bd-852f-e20fab103b48" name="virtual void update" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="4c66cbdf-b5a0-4eed-8d1f-167ad110b80e" />
           </operation>
         </ownedOperationsInternal>

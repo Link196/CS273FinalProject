@@ -29,6 +29,7 @@
           <property
             Id="b63b9880-108f-46e5-821c-8682f3f25b5f"
             name="string name"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -40,6 +41,7 @@
           <property
             Id="d135b1c9-e1ed-4349-bc63-64cc268ec8ac"
             name="int TotalWait"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -51,6 +53,7 @@
           <property
             Id="faf32523-3226-4af2-9467-21d4c2a5b5b2"
             name="int timeTreated"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -62,6 +65,7 @@
           <property
             Id="11451e26-4531-45d1-9e58-5f926d86498f"
             name="int arrivalTime"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -73,6 +77,7 @@
           <property
             Id="2416b29e-82f1-4c44-becf-8bb61522f4d6"
             name="int depatureTime"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -115,6 +120,92 @@
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
+          <operation
+            Id="44399c8c-de66-4f23-9587-001f16691c69"
+            name="Patients"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5ef05106-fc16-467b-a776-7efc82a722ca"
+                  name="string name"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="16eb16ab-9089-4190-8828-ef37bd79e7f1"
+            name="int getdepatureTime"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="d51ccbf6-adae-465b-923f-70e269a24db2"
+            name="int  setdepatureTime"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="88c93f69-25a5-4bf2-abea-edc768ffe694"
+                  name="int depaturetime"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="823a8804-ea5e-4fa1-94a7-851e464db995"
+            name="int setTimeTreated"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="9b82ec84-3884-4bb2-9c7f-532356549ecd"
+            name="int setTotalWait"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="e68a6599-464a-4dc7-b5a4-2aa4387bdcad"
+            name="string getName"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="6bdecaa3-e39a-4e66-b863-132846f08b7c"
+            name="string setName"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fec1d068-c147-4ada-b59a-622ae4002443"
+                  name="string name"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -170,6 +261,7 @@
           <property
             Id="4d59428f-c3e2-46d1-852f-2c560323141a"
             name="int timeTreated"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -181,6 +273,7 @@
           <property
             Id="f5953d98-593d-494c-a2e6-c5a8f6451bf8"
             name="int numTreated"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -192,6 +285,7 @@
           <property
             Id="64aab6af-3ab8-4ec4-8b07-3d868c3f9080"
             name="intTreatmentTime"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -238,7 +332,7 @@
             isQuery="false" />
           <operation
             Id="2178140b-266e-4d76-8ca2-388c837f0af3"
-            name="int setTimeTreated"
+            name="int  setTimeTreated"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -247,7 +341,7 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="da62a2e4-fa81-4911-ad2f-fa9112f345e9"
+                  Id="52d75b69-c8ec-407b-b0f9-7becb46c6c79"
                   name="int timeTreated"
                   direction="In"
                   isUnique="false" />
@@ -267,6 +361,58 @@
                 <parameter
                   Id="af94b08b-909b-4bdc-a7a9-616c58075a89"
                   name="int treatmentTime"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="3c934532-2dff-4d0f-8e40-c9d6cbdcdd08"
+            name="int getTimeTreated"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="99e52d2d-0a4e-43d9-83b9-f2a46a48a180"
+            name="int getTreatmentTime"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="f421a3d3-b2f7-4fb5-b697-fda5013dfda0"
+            name="int setNumTreated"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7cd40593-3b83-4e5e-b594-4f97ebb5870f"
+                  name="int NumTreated"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="fc98d872-5756-466c-948e-2c3f7cb713e7"
+            name="int setTreatmentime"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="283bb7f9-c6fb-4a89-9a9b-52a4523ad681"
+                  name="int treatmenTime"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
@@ -327,6 +473,7 @@
           <property
             Id="ea419f88-6366-4ebd-8335-add784c1c398"
             name="int timeTreated"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -338,6 +485,7 @@
           <property
             Id="a4f9380f-1d20-41b9-96aa-31154dc4abb3"
             name="int numTreated"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -348,7 +496,8 @@
             isComposite="false" />
           <property
             Id="c998766d-f822-4660-a90f-6cae849e739c"
-            name="int treatmentTime()"
+            name="int treatmentTime"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -452,6 +601,58 @@
                 <parameter
                   Id="eb65f31c-9cf0-47e8-8fa7-e32db9cf2018"
                   name="int treatmentTime"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="18e3f272-d72a-4113-ab91-ce7b5b2314b1"
+            name="int setNumTreated"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="34c15df3-69c4-42dc-abaa-2fb415466c31"
+                  name="int NumTreated"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="53548f07-d4dd-4bd2-b575-6c039227da51"
+            name="int getTimeTreated"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="31224161-b411-4f6a-b8d1-258402fe34b6"
+            name="int getTreatmentTime"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="1b4177c9-bb8a-4e3e-b73c-67d9b436a3c6"
+            name="int setTreatmentTime"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cc9285b3-62a4-4e75-af83-4ae4e17506fe"
+                  name="int TreatmentTime"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
@@ -659,7 +860,7 @@
         <ownedOperationsInternal>
           <operation
             Id="fd3f23ed-fb22-44e4-b717-864cc077819b"
-            name="void virtual treatPatient"
+            name="virtual void treatPatient"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -668,7 +869,7 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="c456ea3e-7118-4f73-944c-d9c58238f235"
+                  Id="483fdd80-5b45-44f7-9c7f-3877e1a7509a"
                   name="Patient *p"
                   direction="In"
                   isUnique="false" />
@@ -677,7 +878,7 @@
           </operation>
           <operation
             Id="4c66cbdf-b5a0-4eed-8d1f-167ad110b80e"
-            name="void update"
+            name="virtual void update"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
