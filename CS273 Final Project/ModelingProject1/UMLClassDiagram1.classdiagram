@@ -1,23 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="a3b3d95e-0ec6-45af-bccb-bba61a96e6f5" name="UMLClassDiagram1" linkedPackageId="cbe61372-445a-405d-a0b5-26cc029a2b66" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="5ad33730-28f2-49fb-bf52-06d9521eb5b1">
-      <profileInstance Id="89cd0a4b-e912-486c-8bf6-b0afbf80cc4f" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="d96763ea-cc1b-40e6-ad60-204bd9211eb0">
-      <profileInstance Id="1a390f50-2289-42b5-91f4-59bc8f10c828" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="fd4b8d8b-53cb-4a09-ba9c-7d6a9f0955e8" name="Patients" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="8bd12e55-65a7-419f-ae20-fefe99fd5d99" />
+        <ownedAttributesInternal>
+          <property Id="43ffee30-e0c0-4b33-a185-7c03466a7b20" name="string name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b63b9880-108f-46e5-821c-8682f3f25b5f" />
+          </property>
+          <property Id="7c900d6d-040e-4bc9-b1d4-857bb057febd" name="int TotalWait" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d135b1c9-e1ed-4349-bc63-64cc268ec8ac" />
+          </property>
+          <property Id="aca27d7a-cebe-4775-9135-1ff7318da93c" name="int timeTreated" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="faf32523-3226-4af2-9467-21d4c2a5b5b2" />
+          </property>
+          <property Id="5bb69f59-d219-4b04-9d06-2c94a7fafc9f" name="int arrivalTime" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="11451e26-4531-45d1-9e58-5f926d86498f" />
+          </property>
+          <property Id="476adc36-6e0c-4cb7-9bda-2c99bd1c671f" name="int depatureTime" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2416b29e-82f1-4c44-becf-8bb61522f4d6" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="1f25ad16-e2be-4fad-8fb2-68917c11134d" name="string injury" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f4cd1285-b815-4f6a-8e4c-86f042f95d0f" />
+          </operation>
+          <operation Id="1a7f0a03-0636-43c9-9345-4b9c099bfe4a" name="int getTimeTreated" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ee688032-302a-4637-b506-54ab99bd6de4" />
+          </operation>
+          <operation Id="d9dee263-1314-4f90-866a-8663b8f11d56" name="int getTotalWait" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="50810e1d-6662-479a-9c7a-ed214f0db130" />
+          </operation>
+          <operation Id="3f58cb41-524a-4a64-926b-04ef4b1309fb" name="void update" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c8cdc828-47a0-4018-bc6a-c2385784c1a3" />
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
@@ -41,11 +58,144 @@
             <elementDefinition Id="6b9a6067-5ef0-425b-842d-c8b85010a19f" />
           </association>
         </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="8424148f-ffba-4772-8a60-3d2eba906e67" name="int timeTreated" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4d59428f-c3e2-46d1-852f-2c560323141a" />
+          </property>
+          <property Id="bab70c82-8bb1-445c-98db-f0a0c7d2acd0" name="int numTreated" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f5953d98-593d-494c-a2e6-c5a8f6451bf8" />
+          </property>
+          <property Id="b61f1fa6-d961-47f0-b911-29f694c1a66b" name="intTreatmentTime" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="64aab6af-3ab8-4ec4-8b07-3d868c3f9080" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="5ab79a1a-ad73-4544-bb36-2f7eb05ead03" name="nurse" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a60fb350-9ec0-41fc-8158-3b38b8a83817" />
+          </operation>
+          <operation Id="2d13a137-0f31-4bf8-8cb1-aafeeb6d1a93" name="treatPatient" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="46d7d4f2-5333-4d94-ba83-3384c13a4d54" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="1e0c40d5-3ca9-4354-89f2-9a281e20b090" name="Patient" direction="In" isUnique="false">
+                  <elementDefinition Id="bd73fd86-9ffd-470d-a0ee-c8fa7914fbd5" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="eb3d8040-1e01-4bfa-b519-4f5ccc5794e1" name="int getNumTreated" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="00582f73-a83a-4401-9a36-0407401ba6a6" />
+          </operation>
+          <operation Id="d41b3048-3dc0-4ae5-8af1-e3106f91b856" name="int setTimeTreated" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2178140b-266e-4d76-8ca2-388c837f0af3" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="64c060fa-861b-48d6-8e30-09aaee4260fc" name="int timeTreated" direction="In" isUnique="false">
+                  <elementDefinition Id="da62a2e4-fa81-4911-ad2f-fa9112f345e9" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="83615337-d150-4642-ae85-f44b8c28dbd6" name="setTreatmentTime" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4d851abe-4c44-4c6b-a0a8-b136e97e26fc" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a9283e88-1ad2-4e73-b1dd-753c5ac90a03" name="int treatmentTime" direction="In" isUnique="false">
+                  <elementDefinition Id="af94b08b-909b-4bdc-a7a9-616c58075a89" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
       <class Id="4b773672-9c4e-4d30-a349-6e8be5aa1a07" name="Doctor" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="a310406b-671a-4466-baa9-30c0cbb032d3" />
+        <targetEnds>
+          <association Id="a589bd06-5663-4ea2-934d-6570ae8d2496" isDerived="false" sourceEndRoleName="Doctor" targetEndRoleName="Patients" isLeaf="false" isAbstract="false">
+            <classMoniker Id="fd4b8d8b-53cb-4a09-ba9c-7d6a9f0955e8" LastKnownName="Patients" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7592f5ee-ce73-4d5c-99cb-a5b765dab410" name="Doctor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="bc1c5972-c772-4bdf-918c-e62dc4937e4e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b51e9a85-68d2-4648-b3c6-4be44549bc4b" name="Patients" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="40a80e1a-6646-4407-916a-7421a2613eb3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d9eb87db-698c-438a-8f6b-4f9aa4a06d86" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="9cfc12df-830f-449e-8fb5-c28e37cd06f0" name="int timeTreated" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="ea419f88-6366-4ebd-8335-add784c1c398" />
+          </property>
+          <property Id="616f61e3-a264-4f66-9433-ec2e160944af" name="int numTreated" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a4f9380f-1d20-41b9-96aa-31154dc4abb3" />
+          </property>
+          <property Id="98d9cedb-5f04-4b34-a240-d94b9b635941" name="int treatmentTime()" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c998766d-f822-4660-a90f-6cae849e739c" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="941e1ef6-0d0d-4cb4-9f49-662baf1da0e5" name="doctor" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="14abac18-5e06-46a1-a715-200a005d23a7" />
+          </operation>
+          <operation Id="140cc8b8-d351-4319-8abc-d02a2fac4118" name="treatPaient" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f84e2a68-e0af-4599-93d2-877cda98975e" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c35be914-191b-47f6-84f3-76d658919709" name="Patient *P" direction="In" isUnique="false">
+                  <elementDefinition Id="59a7dd5a-872d-4caf-b20b-45f0e1c5893b" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="c5f1172e-4f27-4bc6-8223-03a454af374a" name="int getNumTreated" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="46246289-67c7-4b58-8cdd-94a7ebeb3cbe" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6779edcc-e40b-432c-bd4d-8c69c487e737" name="int NumTreated" direction="In" isUnique="false">
+                  <elementDefinition Id="8f7b26d9-b8a0-4684-91b5-36aac019b8a6" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="f3a66a96-0b76-414d-8e8e-0c2f787c5c0c" name="void update" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1cae1684-11f9-4eba-8b2e-60a2cd2acbb8" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b919028e-56bb-4a86-9bfe-56de683965c9" name="int clock" direction="In" isUnique="false">
+                  <elementDefinition Id="27b2eecb-9a50-4a82-aad7-6a53a9f34c31" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="86d4ef98-dc38-47dc-a8bf-b2d7d8676ba5" name="int setTimeTreated" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d90b078b-d001-44a8-8004-95a5b51d9f17" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7a691442-d60c-4a02-b63b-6594bb10bebf" name="int timeTreated" direction="In" isUnique="false">
+                  <elementDefinition Id="875f8a50-d464-4d9f-8fca-3c49f02c9f7e" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="7c317ba9-f835-4538-b7ef-bc17d8578c3a" name="setTreatmentTime" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0206dd72-4a27-46e4-99bf-942b6923389f" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="cc6397b7-18d9-4d10-9ab9-c4acbc8831a9" name="int treatmentTime" direction="In" isUnique="false">
+                  <elementDefinition Id="eb65f31c-9cf0-47e8-8fa7-e32db9cf2018" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
@@ -69,6 +219,34 @@
             <elementDefinition Id="f9afb4c6-dab3-47c8-aa18-fb731d3ab289" />
           </association>
         </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="59f6fe51-930c-4115-a7b0-f900956ffa3e" name="numDoctor" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="51f32ead-615a-45d8-8320-eb4f211f9b13" />
+          </property>
+          <property Id="5302d4ec-5f36-4ffd-bce5-b9523df954d8" name="numNurses" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="df23edcf-82a7-4d72-aea9-58eee590c15e" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="c4175351-0a6e-4c95-8887-d3e7b9c04a4e" name="EmergencyRoom" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f2dca42d-a273-4391-80ab-bb000565ee82" />
+          </operation>
+          <operation Id="d076a957-14c7-40f0-afb0-64f9377899e7" name="EmergencyRoom" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3c8d911a-ebc5-497b-9077-3fdf5e62f2e0" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="49c61f79-5a8b-47d1-b38b-3dc507707964" name="int NumberOfDoctors" direction="In" isUnique="false">
+                  <elementDefinition Id="2f6cca60-49e8-4917-aaf4-4621c7b95670" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="28b2c56f-d313-44ed-958a-276bc769625a" name="int NumberOfNurses)" direction="In" isUnique="false">
+                  <elementDefinition Id="06ee12ac-8525-44de-af39-3dd5f08c8ed8" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
@@ -108,10 +286,63 @@
             <elementDefinition Id="aa94de27-da5f-4908-86b1-7adf32301ff7" />
           </association>
         </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="18e4d895-e28f-41b7-8ce4-c29ed0c1e7ef" name="void virtual treatPatient" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="fd3f23ed-fb22-44e4-b717-864cc077819b" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2bea367b-ef00-45c7-a9b9-5b05c12e7bc5" name="Patient *p" direction="In" isUnique="false">
+                  <elementDefinition Id="c456ea3e-7118-4f73-944c-d9c58238f235" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="c91aae5d-2719-44bd-852f-e20fab103b48" name="void update" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4c66cbdf-b5a0-4eed-8d1f-167ad110b80e" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="6b9f40a7-d5f8-4bed-b204-e937b638491f" name="Simulator" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9e366278-2d51-4b3c-b2ae-7be5cb558188" />
+        <ownedAttributesInternal>
+          <property Id="5a0ec765-fe28-4c05-8572-0533f7f5925e" name="int totalTime" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="cdb87f5a-814e-479e-a113-65341891607b" />
+          </property>
+          <property Id="7102d4fb-8a11-46f4-bda3-0af4a9f2d2b3" name="int clock" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2ba26313-5b6d-4ecf-8d5c-13917b69189f" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="904b01eb-d677-424b-92af-02346559df6d" name="Simulator" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b3774646-d0bc-4ac6-8bf5-3bc0520ac61f" />
+          </operation>
+          <operation Id="893b29a3-4bdf-44d4-a5c0-6822196785e4" name="void RunSimulator" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b26645d6-1278-4615-822f-dbb8d88f991e" />
+          </operation>
+          <operation Id="907a947f-2829-4f79-8936-980015ec973a" name="void showStats" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="44388247-d969-4ce8-a307-b95eb49cc404" />
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
   </packagedElements>
   <package Id="cbe61372-445a-405d-a0b5-26cc029a2b66" name="ModelingProject1">
     <elementDefinition Id="fb58817e-8eeb-4096-9bc7-45c3fe120a13" />
+    <profileInstances>
+      <packageHasProfileInstances Id="5ad33730-28f2-49fb-bf52-06d9521eb5b1">
+        <profileInstance Id="89cd0a4b-e912-486c-8bf6-b0afbf80cc4f" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="d96763ea-cc1b-40e6-ad60-204bd9211eb0">
+        <profileInstance Id="1a390f50-2289-42b5-91f4-59bc8f10c828" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>
