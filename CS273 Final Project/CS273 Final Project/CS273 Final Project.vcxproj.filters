@@ -19,4 +19,24 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="EmergencyRoom.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Caregiver.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Doctor.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Nurse.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Patients.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Simulator.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>
