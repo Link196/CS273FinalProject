@@ -1,6 +1,8 @@
 #ifndef PATIENTS_H_
 #define PATIENTS_H_
 #include <string>
+#include <ctime>
+
 
 class Patients
 {
@@ -11,6 +13,7 @@ private:
 	int totalWait = 0;
 	std::string name;
 public:
+	Patients() {}
 	Patients(std::string Newname)
 	{
 		name = Newname;
@@ -30,7 +33,7 @@ public:
 	}
 	void setDepatureTime(int newDepature)
 	{
-		deaptureTime = newDeapture;
+		depatureTime = newDepature;
 	}
 	int getTimetreated()
 	{
@@ -48,7 +51,7 @@ public:
 	{
 		totalWait = wait;
 	}
-	string getName()
+	std::string getName()
 	{
 		return name;
 	}
@@ -56,6 +59,24 @@ public:
 	{
 		name = newname;
 	}
+	int injury()
+	{
+		// picks a number between 1 and 10
+		int x = rand() % 10;
+		int injury;
+		// there is a seventy percent chance the number is between 1 and 10
+		if (x <= 6)
+			injury = rand() % 10+1;
+		// 20 percent chance the number is between 11 and 15
+		else if (x == 7 || x == 8)
+			injury = rand()%4+11;
+		// 10 percent change the number is between 16 and 20
+		else
+			injury = rand()%4+16;
+		return injury;
+	}
+	void update()
+	{}
 };
 
 
