@@ -5,7 +5,8 @@
 #include "Caregiver.h"
 #include "Patients.h"
 
-class Doctor {
+class Doctor 
+{
 private:
 	int numTreated = 0;
 	int timeTreated = 0;
