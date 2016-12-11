@@ -1023,7 +1023,7 @@
             isQuery="false" />
           <operation
             Id="b26645d6-1278-4615-822f-dbb8d88f991e"
-            name="void RunSimulator"
+            name="void runSimulator"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"

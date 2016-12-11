@@ -72,20 +72,6 @@
       </propertyInstances>
     </stereotypeInstance>
   </appliedStereotypesInternal>
-  <profileInstances>
-    <packageHasProfileInstances Id="5bb0f244-c5c5-4161-8a3b-cf46b2b520f1">
-      <profileInstance Id="884c8abc-add7-44cb-aab7-f2cd3de1705f" name="CSharpProfile">
-        <elementDefinition Id="20de0268-1630-4110-9499-2279e6b226b2" />
-      </profileInstance>
-      <elementDefinition Id="c8bad596-7992-44a8-b7e0-3bc7902c0f13" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="0e3d5983-672c-46a7-961e-20cfdc4ccdd2">
-      <profileInstance Id="9890e2e0-252a-4a1a-8c2c-58fe93a9b090" name="TextTemplateBindings">
-        <elementDefinition Id="3a374dae-e90f-4873-a866-5b07ac2ca2ca" />
-      </profileInstance>
-      <elementDefinition Id="f17c42c8-e643-4cae-a652-de2a89f7afb0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="fd4b8d8b-53cb-4a09-ba9c-7d6a9f0955e8" name="Patients" isAbstract="false" isLeaf="false" isActiveClass="false">
@@ -498,7 +484,7 @@
           <operation Id="904b01eb-d677-424b-92af-02346559df6d" name="Simulator" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="b3774646-d0bc-4ac6-8bf5-3bc0520ac61f" />
           </operation>
-          <operation Id="893b29a3-4bdf-44d4-a5c0-6822196785e4" name="void RunSimulator" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="893b29a3-4bdf-44d4-a5c0-6822196785e4" name="void runSimulator" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="b26645d6-1278-4615-822f-dbb8d88f991e" />
           </operation>
           <operation Id="907a947f-2829-4f79-8936-980015ec973a" name="void showStats" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
@@ -522,6 +508,18 @@
           <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
         </profileInstance>
         <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="5bb0f244-c5c5-4161-8a3b-cf46b2b520f1">
+        <profileInstance Id="884c8abc-add7-44cb-aab7-f2cd3de1705f" name="CSharpProfile">
+          <elementDefinition Id="20de0268-1630-4110-9499-2279e6b226b2" />
+        </profileInstance>
+        <elementDefinition Id="c8bad596-7992-44a8-b7e0-3bc7902c0f13" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="0e3d5983-672c-46a7-961e-20cfdc4ccdd2">
+        <profileInstance Id="9890e2e0-252a-4a1a-8c2c-58fe93a9b090" name="TextTemplateBindings">
+          <elementDefinition Id="3a374dae-e90f-4873-a866-5b07ac2ca2ca" />
+        </profileInstance>
+        <elementDefinition Id="f17c42c8-e643-4cae-a652-de2a89f7afb0" />
       </packageHasProfileInstances>
     </profileInstances>
   </package>

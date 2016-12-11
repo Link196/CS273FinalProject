@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CS273 Final Project", "CS273 Final Project\CS273 Final Project.vcxproj", "{FB30B85C-C36E-4CF0-BD80-367BA097778D}"
 EndProject
-Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ModelingProject1", "ModelingProject1\ModelingProject1.modelproj", "{FE16D8CA-D3E9-4C5C-804B-264A20A9DDC5}"
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "CS273 Final Project UML", "ModelingProject1\CS273 Final Project UML.modelproj", "{FE16D8CA-D3E9-4C5C-804B-264A20A9DDC5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
