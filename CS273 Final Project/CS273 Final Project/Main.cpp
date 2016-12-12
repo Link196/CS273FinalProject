@@ -7,15 +7,27 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include "Caregiver.h"
+#include "Citizens.h"
+#include "Doctor.h"
+// #include "EmergencyRoom.h" - probably going to get deleted
+// #include "EntranceQueue.h"
+#include "Nurse.h"
+#include "Patients.h"
+#include "Simulator.h"
+#include "TreatmentQueue.h"
 
 using std::cout;
 using std::endl;
 using std::cin;
 using std::string;
 
+Simulator EmergencyRoom;
+
 int main()
 {
-	string citizens[2000];
+	
+	EmergencyRoom.enterData();
 
 	return 0;
 }

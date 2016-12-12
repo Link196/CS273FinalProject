@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="a3b3d95e-0ec6-45af-bccb-bba61a96e6f5" name="UMLClassDiagram1" linkedPackageId="cbe61372-445a-405d-a0b5-26cc029a2b66" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="a3b3d95e-0ec6-45af-bccb-bba61a96e6f5" name="UMLClassDiagram1" linkedPackageId="cbe61372-445a-405d-a0b5-26cc029a2b66" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <appliedStereotypesInternal>
     <stereotypeInstance Id="20630586-d51b-4785-84a5-7017f6e7f642" name="namespace" profile="CSharpProfile">
       <elementDefinition Id="ec6acca8-2682-4de8-b765-15593b8245f8" />
@@ -489,6 +489,9 @@
           </operation>
           <operation Id="907a947f-2829-4f79-8936-980015ec973a" name="void showStats" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="44388247-d969-4ce8-a307-b95eb49cc404" />
+          </operation>
+          <operation Id="ea6315c1-b707-4f3b-924d-f9bf916e2393" name="void enterData" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5addc1a6-08cf-4ecf-a90f-c9690cc7d5b9" />
           </operation>
         </ownedOperationsInternal>
       </class>
