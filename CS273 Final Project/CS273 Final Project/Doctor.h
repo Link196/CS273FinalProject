@@ -4,8 +4,7 @@
 
 #include "Caregiver.h"
 #include "Patients.h"
-#include "HighInjuryQueue.h"
-#include "LowPriorityQueue.h"
+
 
 class Doctor : public Caregiver
 {
@@ -18,7 +17,7 @@ public:
 		setPrioirty(20); // sets the number the doctor is allowed to treat
 		
 	}
-	void attendPatient(Highinjury high, Lowinjury low,int clock) {
+	void attendPatient() {
 	
 	}
 };

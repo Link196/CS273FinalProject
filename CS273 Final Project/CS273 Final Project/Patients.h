@@ -56,7 +56,7 @@ public:
 	{
 		name = newname;
 	}
-	int injury()
+	void injury()
 	{
 		// picks a number between 1 and 10
 		int x = rand() % 10;
@@ -70,18 +70,9 @@ public:
 		// 10 percent change the number is between 16 and 20
 		else
 			Injury = rand()%4+16;
+		
 	}
-	struct patients {
-		bool operator()( Patients p1, Patients p2)const
-		{
-			if (p1.getInjury() < p2.getInjury())
-				return false;
-			else
-				return true;
-		}
-	};
-	void update()
-	{}
+	
 };
 
 

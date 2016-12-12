@@ -41,10 +41,10 @@
     <ClInclude Include="Random.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="LowPriorityQueue.h">
+    <ClInclude Include="InjuryQueue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="HighInjuryQueue.h">
+    <ClInclude Include="EnterQueue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
