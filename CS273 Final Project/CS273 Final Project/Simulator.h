@@ -14,12 +14,12 @@ class Simulator
 private:
 	int clock;
 
-	int read_int(const std::string &prompt, int low, int high) // takes in a prompt string to display to the user, and takes in integer upper and lower limits, then returns the inputted integer
+	int read_int(const string &prompt, int low, int high) // takes in a prompt string to display to the user, and takes in integer upper and lower limits, then returns the inputted integer
 	{
 		if (low >= high) // invalid range
 			throw invalid_argument("invalid range specified");
 
-		cin.exceptions(std::ios_base::failbit);
+		cin.exceptions(ios_base::failbit);
 		int num = 0;
 		while (true) {
 			try {
