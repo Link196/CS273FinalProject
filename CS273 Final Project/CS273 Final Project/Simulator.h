@@ -13,7 +13,7 @@ private:
 	int clock;
 	// int totalTime;
 
-	int read_int(const std::string &prompt, int low, int high)
+	int read_int(const std::string &prompt, int low, int high) // takes in a prompt string to display to the user, and takes in integer upper and lower limits, then returns the inputted integer
 	{
 		if (low >= high) // invalid range
 			throw std::invalid_argument("invalid range specified");
