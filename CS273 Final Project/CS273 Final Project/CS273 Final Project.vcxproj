@@ -146,11 +146,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Caregiver.h" />
+    <ClInclude Include="Citizens.h" />
     <ClInclude Include="Doctor.h" />
     <ClInclude Include="EmergencyRoom.h" />
+    <ClInclude Include="Entrance.h" />
     <ClInclude Include="Nurse.h" />
     <ClInclude Include="Patients.h" />
     <ClInclude Include="Simulator.h" />
+    <ClInclude Include="TreatmentQueue.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -38,5 +38,14 @@
     <ClInclude Include="Simulator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Citizens.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entrance.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TreatmentQueue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
