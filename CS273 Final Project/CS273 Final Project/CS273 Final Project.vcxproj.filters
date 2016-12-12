@@ -38,16 +38,13 @@
     <ClInclude Include="Simulator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Citizens.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Entrance.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TreatmentQueue.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Random.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LowPriorityQueue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HighInjuryQueue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

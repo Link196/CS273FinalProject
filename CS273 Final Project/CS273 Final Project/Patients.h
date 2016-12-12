@@ -7,15 +7,21 @@ class Patients
 {
 private:
 	
-	int depatureTime = 0;
-	int timetreated = 0;
-	int totalWait = 0;
-	std::string name;
-public:
 	int arrivalTime = 0;
-	Patients(int clock) :
-		arrivalTime(clock) {}
-
+	int depatureTime = 0;
+	std::string name;
+	int TotalWait = 0;
+public:
+	Patients(int clock)
+	{
+		arrivalTime=clock;
+		depatureTime=-1;
+		
+	}
+	int getTotalWait()
+	{
+		return TotalWait;
+	}
 	int getarrivalTime()
 	{
 		return arrivalTime;
@@ -32,22 +38,7 @@ public:
 	{
 		depatureTime = newDepature;
 	}
-	int getTimetreated()
-	{
-		return timetreated;
-	}
-	void setTimetreated(int time)
-	{
-		timetreated = time;
-	}
-	int getTotalWait()
-	{
-		return totalWait;
-	}
-	void setTotalWait(int wait)
-	{
-		totalWait = wait;
-	}
+	
 	std::string getName()
 	{
 		return name;
@@ -70,7 +61,6 @@ public:
 		// 10 percent change the number is between 16 and 20
 		else
 			injury = rand()%4+16;
-		return injury;
 	}
 	void update()
 	{}

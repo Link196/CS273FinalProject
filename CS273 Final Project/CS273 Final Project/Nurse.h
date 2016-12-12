@@ -1,42 +1,20 @@
 #ifndef NURSE_H_
 #define NURSE_H_
 
-#include <queue>
+
 #include "Caregiver.h"
 #include"Patients.h"
 
-class Nurse 
+class Nurse:public Caregiver 
 {
-private:
-	int numTreated=0;
-	int timeTreated=0;
-	int treatmentTime=0;
 public:
-	Nurse() {}
-	int getNumtreated()
+	Nurse()
 	{
-		return numTreated;
+		setMinTreat(1); // sets the minimum treatment for the nurse
+		setMinTreat(10); // sets the maximum treatment time fot he nurse
+		setPrioirty(10); // sets the prioirty the nurse is allowed to treat
 	}
-	void setNumTreated(int treated)
-	{
-		numTreated = treated;
-	}
-	int getTimeTreated()
-	{
-		return timeTreated;
-	}
-	void setTimeTreated(int time)
-	{
-		timeTreated = time;
-	}
-	int getTreatmentTime()
-	{
-		return treatmentTime;
-	}
-	int setTreatmentTime()
-	{
-		treatmentTime = rand() % 1 + 10;
-	}
+	void attendPatient() {}
 }; 
 
 #endif
