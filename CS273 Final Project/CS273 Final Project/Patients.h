@@ -6,18 +6,16 @@
 class Patients
 {
 private:
-	int arrivalTime = 0;
+	
 	int depatureTime = 0;
 	int timetreated = 0;
 	int totalWait = 0;
 	std::string name;
 public:
-	Patients() {}
-	Patients(std::string Newname)
-	{
-		name = Newname;
-		totalWait = 0;
-	}
+	int arrivalTime = 0;
+	Patients(int clock) :
+		arrivalTime(clock) {}
+
 	int getarrivalTime()
 	{
 		return arrivalTime;
