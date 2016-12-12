@@ -17,25 +17,25 @@ private:
 	int read_int(const std::string &prompt, int low, int high) // takes in a prompt string to display to the user, and takes in integer upper and lower limits, then returns the inputted integer
 	{
 		if (low >= high) // invalid range
-			throw std::invalid_argument("invalid range specified");
+			throw invalid_argument("invalid range specified");
 
-		std::cin.exceptions(std::ios_base::failbit);
+		cin.exceptions(std::ios_base::failbit);
 		int num = 0;
 		while (true) {
 			try {
 				while (true) {
-					std::cout << prompt;
-					std::cin >> num;
+					cout << prompt;
+					cin >> num;
 					if (num >= low && num <= high) { // within the specified range
-						std::cout << std::endl;
+						cout << endl;
 						return num;
 					}
 				}
 			}
-			catch (std::ios_base::failure) {
-				std::cout << "Bad numeric string -- try again\n";
-				std::cin.clear();
-				std::cin.ignore(std::numeric_limits<int>::max(), '\n');
+			catch (ios_base::failure) {
+				cout << "Bad numeric string -- try again\n";
+				cin.clear();
+				cin.ignore(numeric_limits<int>::max(), '\n');
 			}
 		}
 	}
@@ -57,7 +57,7 @@ public:
 		//if can't open
 		if (data.fail())
 		{
-			std::cout << "can't open file" << std::endl;
+			cout << "Couldn't open file." << endl;
 		}
 
 		for (int i = 0; i < 2000; i++)
