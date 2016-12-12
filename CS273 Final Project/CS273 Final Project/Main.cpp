@@ -28,6 +28,7 @@ int main()
 {
 	
 	EmergencyRoom.enterData();
-
+	EmergencyRoom.runSimulator();
+	EmergencyRoom.showStats();
 	return 0;
 }
