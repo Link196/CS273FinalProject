@@ -32,18 +32,23 @@ private:
 
 		cin.exceptions(ios_base::failbit);
 		int num = 0;
-		while (true) {
-			try {
-				while (true) {
+		while (true) 
+		{
+			try 
+			{
+				while (true) 
+				{
 					cout << prompt;
 					cin >> num;
-					if (num >= low && num <= high) { // within the specified range
+					if (num >= low && num <= high) 
+					{ // within the specified range
 						cout << endl;
 						return num;
 					}
 				}
 			}
-			catch (ios_base::failure) {
+			catch (ios_base::failure) 
+			{
 				cout << "Bad numeric string -- try again\n";
 				cin.clear();
 				cin.ignore(numeric_limits<int>::max(), '\n');
