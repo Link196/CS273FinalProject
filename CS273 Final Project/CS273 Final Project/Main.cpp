@@ -15,7 +15,7 @@ using std::string;
 
 int main()
 {
-	cout << "Hello World!" << endl;
+	string citizens[2000];
 
 	return 0;
 }
