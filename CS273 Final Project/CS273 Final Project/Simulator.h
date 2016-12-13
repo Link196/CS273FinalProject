@@ -99,7 +99,7 @@ public:
 
 	void runSimulator()
 	{
-		while (clock < 1080) {
+		while (clock < 10080) {
 			Room->update(clock);
 			clock++;
 		}
@@ -111,7 +111,7 @@ public:
 		cout << "Number of patients Treated: ";
 		int numTreated = Room->getNumServed();
 		cout << numTreated << endl;
-		int Totalwait = numTreated + Room->Wating()*1080;
+		int Totalwait = numTreated + Room->Wating()*10080;
 		cout << "Average vist time: "<<(Room->get_total_wait()/Totalwait)*20;
 	}
 };
