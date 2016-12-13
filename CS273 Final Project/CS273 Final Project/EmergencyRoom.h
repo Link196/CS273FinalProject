@@ -20,10 +20,10 @@ private:
 	InjuryQueue injury;
 	vector<Caregiver*> workers;
 	int numPatients;
-	int arrival = 0;;
+	int arrival = 0;
 	double arrival_rate;            // plane arrival rate per minute
 	std::queue<Patients *> the_queue;  // queue of planes in the landing queue
-	int total_wait;  // total accumulated wait time in the landing queue
+	double total_wait = 0;;  // total accumulated wait time in the landing queue
 	int num_served=0;  // number of planes served through the landing queue
 
 public:
@@ -36,7 +36,7 @@ public:
 		this->arrival_rate = arrival_rate;
 	}
 
-	int get_total_wait() {
+	double get_total_wait() {
 		return total_wait;
 	}
 
@@ -80,17 +80,21 @@ public:
 		if (worker->getComplete() <= clock)
 		{
 			num_served++;
+			
 		}
 	}
 
 	void update(int clock)
 	{
-		if (clock == 0)
+		if (clock == 0) {
 			newPatient(clock);
+			total_wait = (total_wait + clock);
+		}
 		else if (clock - arrival >= arrival_rate)
 		{
 			newPatient(clock);
 			arrival = clock;
+			total_wait = (total_wait + clock);
 		}
 		for (int i = 0; i < workers.size(); i++)
 		{
@@ -102,11 +106,11 @@ public:
 			}		
 		}
 	}
+	int Wating()
+	{
+		return injury.size();
+	}
+	
 };
-
-
-
-
-
 
 #endif

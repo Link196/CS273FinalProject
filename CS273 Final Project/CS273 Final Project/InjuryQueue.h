@@ -33,6 +33,12 @@ public:
 	{
 		return Highqueue;
 	}
+	int size()
+	{
+		int size = 0;
+		size = Highqueue.size() + LowQueue.size();
+		return size;
+	}
 };
 
 
