@@ -13,5 +13,6 @@ int main()
 	Emergency.Data();
 	Emergency.runSimulator();
 	Emergency.showStats();
+	Emergency.enterData();
 	return 0;
 }
