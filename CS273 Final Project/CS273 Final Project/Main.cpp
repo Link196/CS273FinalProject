@@ -21,13 +21,13 @@ using std::endl;
 using std::cin;
 using std::string;
 
-Simulator EmergencyRoom;
+Simulator Emergency;
 
 int main()
 {
 	
-	EmergencyRoom.enterData();
-	EmergencyRoom.runSimulator();
-	EmergencyRoom.showStats();
+	Emergency.Data();
+	Emergency.runSimulator();
+	Emergency.showStats();
 	return 0;
 }

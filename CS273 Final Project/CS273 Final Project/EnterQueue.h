@@ -12,11 +12,11 @@ extern Random random;  // Enables us to access the global variable declared in S
 class EnterQueue
 {
 private:
+	
 	double arrival_rate;            // plane arrival rate per minute
 	std::queue<Patients *> the_queue;  // queue of planes in the landing queue
 	int total_wait;  // total accumulated wait time in the landing queue
 	int num_served;  // number of planes served through the landing queue
-
 public:
 	EnterQueue() : total_wait(0), num_served(0) {}
 

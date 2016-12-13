@@ -7,6 +7,7 @@
 #include <limits>
 #include<ios>
 #include "Random.h"
+#include "EmergencyRoom.h"
 
 Random random;
 
@@ -18,8 +19,9 @@ class Simulator
 {
 private:
 	int clock;
-	int totalTime;
-	
+	int totalTime =1080;
+	EmergencyRoom* Room = new EmergencyRoom();
+	EnterQueue* Enter = new EnterQueue();
 
 	int read_int(const string &prompt, int low, int high) // takes in a prompt string to display to the user, and takes in integer upper and lower limits, then returns the inputted integer
 	{
@@ -53,6 +55,15 @@ private:
 	}
 
 public:
+	void Data() {
+		
+		int doctors = read_int("How many Doctors? ", 1, 5);
+		int nurses = read_int("How many Nurses? ", 1, 5);
+		Room->numWorkers(doctors, nurses);
+		int arrivalRate = read_int("What is the arrival rate? ", 0, 60);
+		Enter->set_arrival_rate(arrivalRate);
+
+	}
 	Simulator()
 	{
 		
@@ -80,9 +91,9 @@ public:
 	//	data.close();
 
 		// next, create citizen objects and all the other crap we need
-		int rate = read_int("Please enter the patients arrival rate: ", 1, 59);
+		/*int rate = read_int("Please enter the patients arrival rate: ", 1, 59);
 		double arrival_rate = rate / 60;
-		totalTime *= 60;
+		totalTime *= 60;*/
 
 		
 		
@@ -91,16 +102,18 @@ public:
 
 	void runSimulator()
 	{
-		for (clock = 10080; clock > 0; clock--)
-		{
-			
+		while (clock < 1080) {
+			Room->update(clock);
+			clock++;
 		}
-		
+		cout << "DONE!!!!\n";
 	}
 
 	void showStats()
 	{
-		
+		cout << "Number of patients Treated: ";
+		int numTreated = Room->getNumServed();
+		cout << numTreated << endl;
 	}
 };
 
