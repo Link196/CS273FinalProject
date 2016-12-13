@@ -145,18 +145,6 @@
             aggregation="None"
             isComposite="false" />
           <property
-            Id="faf32523-3226-4af2-9467-21d4c2a5b5b2"
-            name="int timeTreated"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-          <property
             Id="11451e26-4531-45d1-9e58-5f926d86498f"
             name="int arrivalTime"
             visibility="Private"
@@ -180,42 +168,22 @@
             isDerivedUnion="false"
             aggregation="None"
             isComposite="false" />
+          <property
+            Id="960a5ab2-3877-405a-b9e8-5b753d2e7ac0"
+            name="int Injury"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="f4cd1285-b815-4f6a-8e4c-86f042f95d0f"
-            name="string injury"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="ee688032-302a-4637-b506-54ab99bd6de4"
-            name="int getTimeTreated"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="50810e1d-6662-479a-9c7a-ed214f0db130"
-            name="int getTotalWait"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="c8cdc828-47a0-4018-bc6a-c2385784c1a3"
-            name="void update"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="44399c8c-de66-4f23-9587-001f16691c69"
+            Id="a820f17e-3e7d-43d7-b767-ea2e5307a42a"
             name="Patients"
             isLeaf="false"
             isStatic="false"
@@ -225,24 +193,24 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="5ef05106-fc16-467b-a776-7efc82a722ca"
-                  name="string name"
+                  Id="3a910072-919d-42ba-8210-d2e0f173d2f2"
+                  name="int"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
           <operation
-            Id="16eb16ab-9089-4190-8828-ef37bd79e7f1"
-            name="int getdepatureTime"
+            Id="c9dd3ce0-a2f9-4e39-b0d9-3aaac9c176ae"
+            name="int getInjury"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
           <operation
-            Id="d51ccbf6-adae-465b-923f-70e269a24db2"
-            name="int  setdepatureTime"
+            Id="05a3f959-9f02-4da1-8ad9-901f2f4d39ab"
+            name="void setInjury"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -251,31 +219,55 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="88c93f69-25a5-4bf2-abea-edc768ffe694"
-                  name="int depaturetime"
+                  Id="c52a2788-c002-422f-8fee-b5a5b6562e16"
+                  name="int"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
           <operation
-            Id="823a8804-ea5e-4fa1-94a7-851e464db995"
-            name="int setTimeTreated"
+            Id="e9a2ed23-e2d6-4d07-bff9-b5bd389b3402"
+            name="int getTotalWait"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
           <operation
-            Id="9b82ec84-3884-4bb2-9c7f-532356549ecd"
-            name="int setTotalWait"
+            Id="dd3e8292-1e17-401b-9eac-40f2c3865085"
+            name="int getarrivalTime"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
           <operation
-            Id="e68a6599-464a-4dc7-b5a4-2aa4387bdcad"
+            Id="d7833e9a-5b84-431e-8c2d-c61d68c9cb46"
+            name="void setarrivalTime"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="6e297036-ec4e-4020-84c0-85c204e7bcd0"
+            name="int getDepartureTime"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="9d0d9a02-2649-44a1-aec1-1979abb47970"
+            name="void setDepartureTime"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="ad847ffc-1b37-454a-b829-9a040a7675b3"
             name="string getName"
             isLeaf="false"
             isStatic="false"
@@ -283,8 +275,8 @@
             concurrency="Sequential"
             isQuery="false" />
           <operation
-            Id="6bdecaa3-e39a-4e66-b863-132846f08b7c"
-            name="string setName"
+            Id="64ce4809-dfd7-4260-b9a1-70688ec7766a"
+            name="void setName"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -293,13 +285,21 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="fec1d068-c147-4ada-b59a-622ae4002443"
-                  name="string name"
+                  Id="6367952f-4f90-4075-8bc9-47eb7f69f7fb"
+                  name="string"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="1a584296-26be-4b1a-8cde-d7aa9e6e689d"
+            name="void injury"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -351,167 +351,23 @@
             </relationshipOwnedElementsInternal>
           </association>
         </targetEnds>
-        <ownedAttributesInternal>
-          <property
-            Id="4d59428f-c3e2-46d1-852f-2c560323141a"
-            name="int timeTreated"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-          <property
-            Id="f5953d98-593d-494c-a2e6-c5a8f6451bf8"
-            name="int numTreated"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-          <property
-            Id="64aab6af-3ab8-4ec4-8b07-3d868c3f9080"
-            name="intTreatmentTime"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-        </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="a60fb350-9ec0-41fc-8158-3b38b8a83817"
-            name="nurse"
+            Id="7506907c-d196-4b2c-81c9-9eed058eb5f8"
+            name="Nurse"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
           <operation
-            Id="46d7d4f2-5333-4d94-ba83-3384c13a4d54"
-            name="treatPatient"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="bd73fd86-9ffd-470d-a0ee-c8fa7914fbd5"
-                  name="Patient"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="00582f73-a83a-4401-9a36-0407401ba6a6"
-            name="int getNumTreated"
+            Id="c6040fd1-461e-4008-ab7c-91314f79e254"
+            name="void attendPatient"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
-          <operation
-            Id="2178140b-266e-4d76-8ca2-388c837f0af3"
-            name="int  setTimeTreated"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="52d75b69-c8ec-407b-b0f9-7becb46c6c79"
-                  name="int timeTreated"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="4d851abe-4c44-4c6b-a0a8-b136e97e26fc"
-            name="setTreatmentTime"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="af94b08b-909b-4bdc-a7a9-616c58075a89"
-                  name="int treatmentTime"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="3c934532-2dff-4d0f-8e40-c9d6cbdcdd08"
-            name="int getTimeTreated"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="99e52d2d-0a4e-43d9-83b9-f2a46a48a180"
-            name="int getTreatmentTime"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="f421a3d3-b2f7-4fb5-b697-fda5013dfda0"
-            name="int setNumTreated"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="7cd40593-3b83-4e5e-b594-4f97ebb5870f"
-                  name="int NumTreated"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="fc98d872-5756-466c-948e-2c3f7cb713e7"
-            name="int setTreatmentime"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="283bb7f9-c6fb-4a89-9a9b-52a4523ad681"
-                  name="int treatmenTime"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -563,195 +419,23 @@
             </relationshipOwnedElementsInternal>
           </association>
         </targetEnds>
-        <ownedAttributesInternal>
-          <property
-            Id="ea419f88-6366-4ebd-8335-add784c1c398"
-            name="int timeTreated"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-          <property
-            Id="a4f9380f-1d20-41b9-96aa-31154dc4abb3"
-            name="int numTreated"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-          <property
-            Id="c998766d-f822-4660-a90f-6cae849e739c"
-            name="int treatmentTime"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-        </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="14abac18-5e06-46a1-a715-200a005d23a7"
-            name="doctor"
+            Id="890f57ba-faef-421e-9491-891e30f102db"
+            name="Doctor"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
           <operation
-            Id="f84e2a68-e0af-4599-93d2-877cda98975e"
-            name="treatPaient"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="59a7dd5a-872d-4caf-b20b-45f0e1c5893b"
-                  name="Patient *P"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="46246289-67c7-4b58-8cdd-94a7ebeb3cbe"
-            name="int getNumTreated"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="8f7b26d9-b8a0-4684-91b5-36aac019b8a6"
-                  name="int NumTreated"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="1cae1684-11f9-4eba-8b2e-60a2cd2acbb8"
-            name="void update"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="27b2eecb-9a50-4a82-aad7-6a53a9f34c31"
-                  name="int clock"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="d90b078b-d001-44a8-8004-95a5b51d9f17"
-            name="int setTimeTreated"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="875f8a50-d464-4d9f-8fca-3c49f02c9f7e"
-                  name="int timeTreated"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="0206dd72-4a27-46e4-99bf-942b6923389f"
-            name="setTreatmentTime"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="eb65f31c-9cf0-47e8-8fa7-e32db9cf2018"
-                  name="int treatmentTime"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="18e3f272-d72a-4113-ab91-ce7b5b2314b1"
-            name="int setNumTreated"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="34c15df3-69c4-42dc-abaa-2fb415466c31"
-                  name="int NumTreated"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="53548f07-d4dd-4bd2-b575-6c039227da51"
-            name="int getTimeTreated"
+            Id="79898a07-dd06-4e23-84fc-0e126fec0cf0"
+            name="void attendPatient"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
-          <operation
-            Id="31224161-b411-4f6a-b8d1-258402fe34b6"
-            name="int getTreatmentTime"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="1b4177c9-bb8a-4e3e-b73c-67d9b436a3c6"
-            name="int setTreatmentTime"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="cc9285b3-62a4-4e75-af83-4ae4e17506fe"
-                  name="int TreatmentTime"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -805,8 +489,9 @@
         </targetEnds>
         <ownedAttributesInternal>
           <property
-            Id="51f32ead-615a-45d8-8320-eb4f211f9b13"
-            name="numDoctor"
+            Id="3e9c736d-b8e3-4741-a1a3-806e8bc1d79f"
+            name="EnterQueue *enter"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -816,8 +501,93 @@
             aggregation="None"
             isComposite="false" />
           <property
-            Id="df23edcf-82a7-4d72-aea9-58eee590c15e"
-            name="numNurses"
+            Id="87c9a5c7-8dc2-4e03-8ea1-cd73161e89c9"
+            name="InjuryQueue injury"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="cb754d56-fc3b-4065-a2c7-4da5ba3aee42"
+            name="Vector&lt;Caregiver*&gt; workers"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="d90ce228-c3a1-4194-878f-0296cd7f16b3"
+            name="int numPatients"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="da0b7db8-94ec-4e69-bc28-cc367476f89f"
+            name="int arrival"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="f7d03838-7b4f-41b5-831e-ca7c7f5458d2"
+            name="double arrival_rate"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="2d792a72-bcec-4f4b-9ea4-4f4314112488"
+            name="queue&lt;Patients*&gt; the_queue"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="de22cd5d-ed01-4f96-ae47-3a29e867bbd5"
+            name="double total_wait"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="963fd779-d0a7-429f-ab82-d19323529c47"
+            name="int num_served"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -829,7 +599,7 @@
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="f2dca42d-a273-4391-80ab-bb000565ee82"
+            Id="a1474247-6ee7-4915-9e93-09dd4366b69d"
             name="EmergencyRoom"
             isLeaf="false"
             isStatic="false"
@@ -837,8 +607,16 @@
             concurrency="Sequential"
             isQuery="false" />
           <operation
-            Id="3c8d911a-ebc5-497b-9077-3fdf5e62f2e0"
-            name="EmergencyRoom"
+            Id="8579b36e-7c5b-4617-a784-9b27d522e20a"
+            name="int getNumServed"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="04b5b61f-cd4c-4a3a-bc98-3d4a435af74c"
+            name="void set_arrival"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -847,20 +625,115 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="2f6cca60-49e8-4917-aaf4-4621c7b95670"
-                  name="int NumberOfDoctors"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="06ee12ac-8525-44de-af39-3dd5f08c8ed8"
-                  name="int NumberOfNurses)"
+                  Id="0a60e092-f387-479d-8da6-08c6edfd5403"
+                  name="double"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="a7e8ba89-bbde-4137-ac71-064f87fa6255"
+            name="double get_total_wait"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="69f61ee4-aa2c-49fa-a5c2-5d36d4ef0218"
+            name="void update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d14a7825-c781-4e1f-93e6-ae6f51473d10"
+                  name="int"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="64639099-b6ef-411e-8e06-9e393f69e75e"
+            name="void numWorkers"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6f168051-1f0c-477e-9353-9951d9fd9245"
+                  name="int"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="239f6eb9-9a60-4ebb-89b5-bbbebd2ebdc6"
+                  name="int"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1797d6a8-4ec8-46e9-a45d-30f1fc44b2de"
+            name="void newPatient"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f4e8afa0-35e3-413f-8b4d-712209822bca"
+                  name="int"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f9763d9a-26ff-426d-b608-70ff622c4abb"
+            name="void Treat"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a6e143b6-182c-44ba-b703-ec99c3002203"
+                  name="int&amp;"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1b2c8796-891b-4854-a236-a36d2442a955"
+                  name="Caregiver"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ee092505-44fb-4839-bd83-cd002048c1e2"
+            name="int waiting"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -951,10 +824,80 @@
             </relationshipOwnedElementsInternal>
           </association>
         </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="1ddbe923-de88-49c8-948c-7f7975d9cd4d"
+            name="int minTreat"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="1856ea98-9aa2-48e1-9b54-882ff0b77eee"
+            name="int maxTreat"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="d54ba03c-9646-4cdb-a193-faa42ccc0f1b"
+            name="int Complete"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="ee4adad1-a2a6-4bd5-b726-1159059ce464"
+            name="Patients * p"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="baba25df-d9d0-401d-9294-cc7f0d391bd6"
+            name="int priority"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
             Id="fd3f23ed-fb22-44e4-b717-864cc077819b"
-            name="virtual void treatPatient"
+            name="Caregiver"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="72ed71f8-6d6a-4ea3-ae24-89d23c7de728"
+            name="Caregiver"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -963,16 +906,160 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="483fdd80-5b45-44f7-9c7f-3877e1a7509a"
-                  name="Patient *p"
+                  Id="f772a7d6-a31a-4b27-bf54-b4b3b7f18732"
+                  name="int"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ae7d09df-dae3-4540-9cf4-8defc93510dd"
+                  name="int"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="12a6497f-6777-4ed3-97be-e6abfefe79d9"
+                  name="int"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
           <operation
-            Id="4c66cbdf-b5a0-4eed-8d1f-167ad110b80e"
-            name="virtual void update"
+            Id="7f395e1a-b108-49c1-98ad-7fd42beac052"
+            name="void setTreatTime"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0db05237-23ff-4f6b-b67c-906710886983"
+                  name="int"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="47be6880-0b7f-495c-b97d-aeef700d1ee7"
+            name="int getComplete"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="44c0c251-d4a4-452c-8de1-17a91e9a40ba"
+            name="void setComplete"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="811d013a-0ae8-4250-a966-d5c041a9fd91"
+                  name="int"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="522f0cfb-ab74-41d8-857c-cafeb645129d"
+            name="int getMinTreat"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="8b742c2e-3f4a-4885-b982-143fd37adc9d"
+            name="void setMinTreat"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e5ebc744-f5ca-4dfe-a402-38ce242ac1c2"
+                  name="int"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="995f7223-4f46-4b0d-b716-dc4ff7a07186"
+            name="int getPriority"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="a81adeaa-469f-44eb-a8f7-3067d555c541"
+            name="void setPriority"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e85f6d42-436b-49d3-8dfd-25f705df7a42"
+                  name="int"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="fc07e760-1f4f-49b2-a595-52475290ab87"
+            name="int getMaxTreat"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="91e412a7-68c0-4015-ae5c-2164534579b1"
+            name="void setMaxTreat"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="83ef9b2b-6ad0-4889-a28a-dedae0f2e8f2"
+                  name="int"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="602f70df-39d7-44d6-8ba9-1fec765c78ce"
+            name="bool withPatient"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="8e24413e-af56-4739-b512-0300919bcd7f"
+            name="virtual void attendPatient"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -990,8 +1077,9 @@
         isActiveClass="false">
         <ownedAttributesInternal>
           <property
-            Id="cdb87f5a-814e-479e-a113-65341891607b"
-            name="int totalTime"
+            Id="370981fe-7f58-4440-a7ac-4096b7abb4df"
+            name="int clock"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -1001,8 +1089,33 @@
             aggregation="None"
             isComposite="false" />
           <property
-            Id="2ba26313-5b6d-4ecf-8d5c-13917b69189f"
-            name="int clock"
+            Id="bf37671b-906b-44bd-aea8-038b5204067e"
+            name="int totalTime"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="c8ca35c9-c67d-4e33-98b1-96f3c648f5a9"
+            name="EmergencyRoom *"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="734c28b3-938f-4bfa-af7c-c22336456dca"
+            name="EnterQueue *"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -1014,15 +1127,48 @@
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="b3774646-d0bc-4ac6-8bf5-3bc0520ac61f"
-            name="Simulator"
+            Id="969b43b2-2fb4-4dba-9e47-b4be2a07ecbf"
+            name="int read_int"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="dc25a5eb-8562-4b52-8d7e-e57a3f7813aa"
+                  name="const string&amp;"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fb69b3cf-6fe1-4f35-8996-5434e3cdd51e"
+                  name="int"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cd062302-844e-4367-b782-98fb12c44399"
+                  name="int"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="275b9f1a-ba08-4f30-bbf9-1e781013e6bc"
+            name="void Data"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
           <operation
-            Id="b26645d6-1278-4615-822f-dbb8d88f991e"
+            Id="662e62ce-8e56-4a01-86b6-ce1e0ff9e078"
             name="void runSimulator"
             isLeaf="false"
             isStatic="false"
@@ -1030,16 +1176,331 @@
             concurrency="Sequential"
             isQuery="false" />
           <operation
-            Id="44388247-d969-4ce8-a307-b95eb49cc404"
+            Id="f3ad42ae-f7d2-477b-8f22-24d2d8a00736"
             name="void showStats"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a8f34a49-d529-4f89-8d87-b10d7362a3eb"
+        name="EnterQueue"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="32d6865b-85c9-4b6f-8008-d178f72848b7"
+            name="double arrival_rate"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="f578521e-8b56-4431-ae43-db0595eed1f7"
+            name="queue&lt;Patients*&gt; the_queue"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="eead17d7-3e4d-4a31-a6f8-0f4023e403ba"
+            name="int total_wait"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="b52e0127-0f5e-4e08-bcc2-c24838e250a2"
+            name="int num_served"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="e9e4b231-a68b-47df-84cd-a6a934e4d33f"
+            name="friend class Injury"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
           <operation
-            Id="5addc1a6-08cf-4ecf-a90f-c9690cc7d5b9"
-            name="void enterData"
+            Id="7d57b63b-0048-460c-bf53-c5c78fa6cc5e"
+            name="EnterQueue"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="2e7f9224-6726-4ae6-b303-a3bb48aae6c8"
+            name="void set_arrival_rate"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bfe2352f-d765-4121-a284-30b5abede663"
+                  name="double"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="87266cfb-f1a2-47ee-a73a-dee3e6898049"
+            name="int get_total_wait"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="1ab4e914-be83-495f-869d-a7e088ad7edb"
+            name="int get_num_served"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="8df8fd9e-048e-482d-9a0a-652f0a3aa9ed"
+            name="void update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0bdcfc6a-ee1f-4bd6-8a40-3eb1bc188393"
+                  name="int"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="613effd9-40c4-468c-b800-c829c420232e"
+        name="InjuryQueue"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="3896266b-e982-41da-a6b9-9266cc963e35"
+            name="queue&lt;Patients&gt; Highqueue"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="0eaa7393-7fe2-4639-a053-f3cb58892ec6"
+            name="queue&lt;Patients&gt; Lowqueue"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="cedbf4fd-3533-427d-9c2d-6678475180d0"
+            name="InjuryQueue"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="f89c0296-6df9-4336-9917-de0ef515003b"
+            name="InjuryQueue"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="abb80895-ae8d-4e0b-b4ce-946a8cc52cc5"
+                  name="int"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="97209ca7-981e-43ae-a504-a729ccf1c313"
+                  name="Patients"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="7d89f8cf-9bb0-4d72-99d6-a2f42a24e709"
+            name="void setLow"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c8b89248-faa9-4869-a1b5-8cadab04080c"
+                  name="Patients"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a33cd47e-72b5-4b7e-bf4e-c03403fdd72d"
+            name="queue&lt;Patients&gt; getlow"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="7c627828-08f0-4448-8cfb-dbc93abf7a16"
+            name="void setHigh"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f16f4728-f898-4ed9-a74d-d8143a1fac65"
+                  name="Patients"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="132254d9-5d67-4685-8469-50e459a7620b"
+            name="queue&lt;Patients&gt; getHigh"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="13eeaab3-0ea4-40ec-b610-ba884e003c96"
+            name="int size"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="3c86cb0a-8c65-43f9-85d3-ecf7e9d63699"
+        name="Random"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedOperationsInternal>
+          <operation
+            Id="3d28c383-32df-4bc4-a457-1ee51beb3b1e"
+            name="Random"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="5c41ff46-2abd-409d-ba67-2ddd5e18dda8"
+            name="Random"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="265987dd-f0ce-47e5-99d9-831787946120"
+                  name="int"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="8ec98618-d0c0-4120-bf7c-040fbce0ba1f"
+            name="int nextInt"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="762b52ce-8b45-4667-a958-bbcb2c3d8383"
+                  name="int"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d3c5e118-66b8-45f5-a079-d730df5090e2"
+            name="double nextDouble"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"

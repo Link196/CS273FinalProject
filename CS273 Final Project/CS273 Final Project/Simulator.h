@@ -5,7 +5,7 @@
 #include <string>
 #include <stdexcept>
 #include <limits>
-#include<ios>
+#include <ios>
 #include "Random.h"
 #include "EmergencyRoom.h"
 
@@ -19,7 +19,7 @@ class Simulator
 {
 private:
 	int clock;
-	int totalTime =1080;
+	int totalTime =10080;
 	EmergencyRoom* Room = new EmergencyRoom();
 	EnterQueue* Enter = new EnterQueue();
 
@@ -99,7 +99,8 @@ public:
 
 	void runSimulator()
 	{
-		while (clock < 10080) {
+		while (clock < 10080) 
+		{
 			Room->update(clock);
 			clock++;
 		}
