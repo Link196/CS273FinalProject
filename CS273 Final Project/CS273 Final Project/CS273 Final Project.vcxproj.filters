@@ -41,9 +41,6 @@
     <ClInclude Include="Random.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="EnterQueue.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="HighInjuryQueue.h">
       <Filter>Header Files</Filter>
     </ClInclude>

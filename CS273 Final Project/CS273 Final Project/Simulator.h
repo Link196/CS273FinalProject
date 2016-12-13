@@ -18,10 +18,10 @@ using namespace std;
 class Simulator
 {
 private:
-	int clock;
-	int totalTime =10080;
-	EmergencyRoom* Room = new EmergencyRoom();
-	EnterQueue* Enter = new EnterQueue();
+	int clock; // Keeps track of total time 
+	int totalTime =10080; // Time the whole simulation takes
+	EmergencyRoom* Room = new EmergencyRoom(); // pointer to emergencyRoom
+	
 
 	int read_int(const string &prompt, int low, int high) // takes in a prompt string to display to the user, and takes in integer upper and lower limits, then returns the inputted integer
 	{
@@ -60,7 +60,7 @@ public:
 		int doctors = read_int("How many Doctors? ", 1, 5);
 		int nurses = read_int("How many Nurses? ", 1, 5);
 		Room->numWorkers(doctors, nurses);
-		int Rate = read_int("What is the arrival rate? ", 1, 59);
+		int Rate = read_int("What is the arrival rate of Patients? ", 1, 59);
 		double arrival_rate = Rate/60.0;
 		Room->set_arrival_rate(arrival_rate);
 
@@ -100,7 +100,8 @@ public:
 
 	void runSimulator()
 	{
-		while (clock < 10080) 
+		// keeps running the simulation until it has been a whole week
+		while (clock < totalTime) 
 		{
 			Room->update(clock);
 			clock++;
@@ -110,15 +111,15 @@ public:
 
 	void showStats()
 	{
-		cout << "Number of patients Treated: ";
-		int numTreated = Room->getNumServed();
-		cout << numTreated << endl;
-		int Totalwait = numTreated + Room->Wating()*10080;
-		cout << "Average vist time: "<<(Room->get_total_wait()/Totalwait)*20;
+		
+		// Returns the amount of Patients that were created and treated in the simulation
+		int numPatients = Room->getNumPatients();
+		cout << "Number of Patients Treated: ";
+		cout << numPatients << endl;
+		// Finds the average Wait time for each patient
+		int Totalwait = numPatients + Room->Wating() * 10080; // takes the total patients and adds the waiting time *'s  the total time
+		cout << "Average vist time: " << (Room->get_total_wait() / Totalwait) * 20; // Then the total wait time and divides by the total time and *'s that by the max wait time
 		cout << endl;
-		int numPatiants = Room->getNumPatiants();
-		cout << "Number of Patients: ";
-		cout << numPatiants << endl;
 	}
 };
 

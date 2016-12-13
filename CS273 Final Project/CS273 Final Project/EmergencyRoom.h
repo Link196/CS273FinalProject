@@ -4,7 +4,6 @@
 #include <queue>
 #include "Caregiver.h"
 #include "Doctor.h"
-#include "EnterQueue.h"
 #include "HighInjuryQueue.h"
 #include "LowQueue.h"
 #include "Nurse.h"
@@ -18,19 +17,19 @@ Random random;
 class EmergencyRoom
 {
 private:
-	EnterQueue *enter;
-	HighInjuryQueue Highinjury;
-	LowQueue Lowinjury;
-	vector<Caregiver*> workers;
-	int numPatients=0;
-	int arrival = 0;
-	double arrivalRate=0.0;            // plane arrival rate per minute
-	std::queue<Patients *> the_queue;  // queue of planes in the landing queue
-	double total_wait = 0;  // total accumulated wait time in the landing queue
-	int num_served=0;  // number of planes served through the landing queue
+	
+	HighInjuryQueue Highinjury; // creates a highinjury queue
+	LowQueue Lowinjury;			// creates a lowinjury queue
+	vector<Caregiver*> workers; // creates a vector of doctors and nurses
+	int numPatients=0;			// total number of patients treated
+	int arrival = 0;			// the last patient to arrive 
+	double arrivalRate=0.0;            // patient arrival rate per minute
+	double total_wait = 0;  // total accumulated wait time while being treated
+	int num_served=0;  // number of patients served 
 
 public:
 	EmergencyRoom() {}
+
 	int getNumServed()
 	{
 		return num_served;
@@ -46,32 +45,27 @@ public:
 	{
 		return arrivalRate;
 	}
-	int getNumPatiants()
+	int getNumPatients()
 	{
 		return numPatients;
 	}
-	/*void update(int clock)
-	{
-		Patients *p;
-
-		if (random.nextDouble() < arrival_rate) {
-			the_queue.push(p);
-		}
-
-	}*/
-
+	
+	// creates the correct number of doctors and nurses
 	void numWorkers(int doctor, int nurse)
 	{
 		for (int i = 0; i < nurse; i++)
 		{
+		// Pushes the number of nurses wanted into the workers vector
 		workers.push_back(new(Nurse));
 		}
+		// pushes the of doctors wanted into the workers vector
 		for (int x = 0; x < doctor; x++) 
 		{
 			workers.push_back(new(Doctor));
 		}
 
 	}
+	// creates a Patient and assigns them an injury and puts them into correct injury queue
 	void newPatient(int clock)
 	{
 		numPatients++;
@@ -80,33 +74,27 @@ public:
 		if (patient.getInjury() <= 10)
 			Lowinjury.setLow(patient);
 		else if (patient.getInjury() > 10)
-			Highinjury.setHigh(patient);
-		
-	}
-	void Treat(int clock, Caregiver *worker)
-	{
-		if (worker->getComplete() <= clock)
-		{
-			num_served++;	
-		}
+			Highinjury.setHigh(patient);	
 	}
 
 	void update(int& clock)
 	{
+		// checks to see if the simulation has started and then add a patient
 		if (clock == 0) {
 			newPatient(clock);
 			total_wait = (total_wait + clock);
 		}
-		 if (clock-arrival >= arrivalRate)
+		// outputs if the another patient if the random number is less then the arrivalRate 
+		 if (random.nextDouble() <= arrivalRate)
 		{
 			newPatient(clock);
 			arrival = clock;
 			total_wait = (total_wait + clock);
 		}
+		
 		for (int i =0; i < workers.size(); i++)
 		{
-			if (workers[i]->withPatient())
-				Treat(clock, workers[i]);
+			// checks to see if the workers are working if not then it puts them to work
 			if (!workers[i]->withPatient())
 			{
 				workers[i]->attendPatient(Highinjury,Lowinjury,clock);
@@ -115,6 +103,7 @@ public:
 	}
 	int Wating()
 	{
+		// returns the total amount of patients
 		return Highinjury.size()+Lowinjury.size();
 	}
 	
