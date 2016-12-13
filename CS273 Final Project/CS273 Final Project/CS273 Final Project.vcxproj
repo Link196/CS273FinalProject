@@ -149,7 +149,8 @@
     <ClInclude Include="Doctor.h" />
     <ClInclude Include="EmergencyRoom.h" />
     <ClInclude Include="EnterQueue.h" />
-    <ClInclude Include="InjuryQueue.h" />
+    <ClInclude Include="HighInjuryQueue.h" />
+    <ClInclude Include="LowQueue.h" />
     <ClInclude Include="Nurse.h" />
     <ClInclude Include="Patients.h" />
     <ClInclude Include="Random.h" />

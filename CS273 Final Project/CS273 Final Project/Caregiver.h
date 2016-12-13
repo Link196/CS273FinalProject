@@ -2,6 +2,8 @@
 #define CARGIVER_H_
 
 #include "Patients.h"
+#include "HighInjuryQueue.h"
+#include "LowQueue.h"
 
 class Caregiver {
 
@@ -26,15 +28,11 @@ public:
 	
 	// the random treatment time for the employee
 	void setTreatTime(int clock) {
-		Complete = (rand() % (maxTreat - minTreat)+clock);
+		Complete = (rand() % (maxTreat - minTreat))+clock;
 	}
 	int getComplete()
 	{
 		return Complete; //returns the time it took to complete treatment
-	}
-	void setComplete(int complete)
-	{
-		Complete = complete;
 	}
 	int getMinTreat() 
 	{ 
@@ -70,6 +68,6 @@ public:
 			return true;
 	}
 	// sets the doctor to start attending to the patient
-	virtual void attendPatient() = 0;
+	virtual void attendPatient(HighInjuryQueue &h,LowQueue &l, int clock) = 0;
 };
 #endif 

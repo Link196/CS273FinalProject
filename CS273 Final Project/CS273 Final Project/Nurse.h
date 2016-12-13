@@ -7,6 +7,8 @@
 
 class Nurse:public Caregiver 
 {
+private:
+	Patients *Patient;
 public:
 	Nurse()
 	{
@@ -14,7 +16,26 @@ public:
 		setMinTreat(10); // sets the maximum treatment time fot he nurse
 		setPrioirty(10); // sets the prioirty the nurse is allowed to treat
 	}
-	void attendPatient() {}
+	void attendPatient(HighInjuryQueue& h, LowQueue& l, int clock) {
+		if (h.empty())
+		{
+			if (!l.empty())
+			{
+				Patients *NewPatient = new Patients(l.top());
+				Patient = NewPatient;
+				this->setTreatTime(clock);
+				l.removePatient();
+			}
+		}
+		else
+		{
+			Patients *NewPatient = new Patients(h.top());
+			Patient = NewPatient;
+			this->setTreatTime(clock);
+			h.removePatient();
+		}
+
+	}
 }; 
 
 #endif

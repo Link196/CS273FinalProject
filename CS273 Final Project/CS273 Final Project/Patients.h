@@ -52,7 +52,7 @@ public:
 	{
 		return name;
 	}
-	void setName(int newname)
+	void setName(std::string newname)
 	{
 		name = newname;
 	}

@@ -5,7 +5,8 @@
 #include "Caregiver.h"
 #include "Doctor.h"
 #include "EnterQueue.h"
-#include "InjuryQueue.h"
+#include "HighInjuryQueue.h"
+#include "LowQueue.h"
 #include "Nurse.h"
 #include "Patients.h"
 #include "Random.h"
@@ -17,7 +18,8 @@ class EmergencyRoom
 {
 private:
 	EnterQueue *enter;
-	InjuryQueue injury;
+	HighInjuryQueue Highinjury;
+	LowQueue Lowinjury;
 	vector<Caregiver*> workers;
 	int numPatients;
 	int arrival = 0;
@@ -66,21 +68,18 @@ public:
 	void newPatient(int clock)
 	{
 		Patients patient(clock);
-		int x = 0;
 		patient.injury();
-		x = patient.getInjury();
-		if (x <= 10)
-			injury.setLow(patient);
-		else
-			injury.setHigh(patient);
+		if (patient.getInjury() <= 10)
+			Lowinjury.setLow(patient);
+		else if (patient.getInjury() > 10)
+			Highinjury.setHigh(patient);
 		numPatients++;
 	}
-	void Treat(int &clock, Caregiver *worker)
+	void Treat(int clock, Caregiver *worker)
 	{
 		if (worker->getComplete() <= clock)
 		{
-			num_served++;
-			
+			num_served++;	
 		}
 	}
 
@@ -100,15 +99,15 @@ public:
 		{
 			if (workers[i]->withPatient())
 				Treat(clock, workers[i]);
-			else if (!workers[i]->withPatient())
+			if (!workers[i]->withPatient())
 			{
-				workers[i]->attendPatient();
+				workers[i]->attendPatient(Highinjury,Lowinjury,clock);
 			}		
 		}
 	}
 	int Wating()
 	{
-		return injury.size();
+		return Highinjury.size()+Lowinjury.size();
 	}
 	
 };

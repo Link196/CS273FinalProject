@@ -4,10 +4,14 @@
 
 #include "Caregiver.h"
 #include "Patients.h"
+#include "HighInjuryQueue.h"
+#include "LowQueue.h"
 
 
 class Doctor : public Caregiver
 {
+private:
+	Patients *Patient;
 public:
 	
 	Doctor()
@@ -17,8 +21,25 @@ public:
 		setPrioirty(20); // sets the number the doctor is allowed to treat
 		
 	}
-	void attendPatient() {
-	
+	void attendPatient(HighInjuryQueue& h,LowQueue& l,int clock) {
+		if (!h.empty())
+		{
+			if (!l.empty())
+			{
+				Patients *NewPatient = new Patients(l.top());
+				Patient = NewPatient;
+				this->setTreatTime(clock);
+				l.removePatient();
+			}
+		}
+		else
+		{
+			Patients *NewPatient = new Patients(h.top());
+			Patient = NewPatient;
+			this->setTreatTime(clock);
+			h.removePatient();
+		}
+
 	}
 };
 #endif 
