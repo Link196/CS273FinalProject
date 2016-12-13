@@ -72,12 +72,8 @@ public:
 		string citizens[2000];
 		ifstream data;
 
-		// Choose the correct file path for whichever computer the simulator is running on (just uncomment it if it's already listed):
-		// File path for Andrew's laptop:
-		data.open("C:\\Users\\Andrew Hutson\\OneDrive\\Documents\\Whitworth University\\2016-2017\\Fall 2016\\Data Structures\\Simulation Project\\residents_of_273ville.txt"); 
-		// File path for Andrew's desktop:
-		// data.open("C:\\Users\\andre\\Source\\Repos\\CS273FinalProject\\CS273 Final Project\\residents_of_273ville.txt");
-		// add another file path if needed to run on a different computer
+		// Open residents file
+		data.open("residents_of_273ville.txt",ios::in);
 		
 		//if can't open
 		if (data.fail())
