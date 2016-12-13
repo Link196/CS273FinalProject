@@ -9,7 +9,7 @@
 #include "Random.h"
 #include "EmergencyRoom.h"
 
-Random random;
+extern Random random;
 
 using namespace std;
 
@@ -60,8 +60,9 @@ public:
 		int doctors = read_int("How many Doctors? ", 1, 5);
 		int nurses = read_int("How many Nurses? ", 1, 5);
 		Room->numWorkers(doctors, nurses);
-		int arrivalRate = read_int("What is the arrival rate? ", 0, 60);
-		Enter->set_arrival_rate(arrivalRate);
+		int Rate = read_int("What is the arrival rate? ", 1, 59);
+		double arrival_rate = Rate/60.0;
+		Room->set_arrival_rate(arrival_rate);
 
 	}
 	Simulator() {}
@@ -114,6 +115,10 @@ public:
 		cout << numTreated << endl;
 		int Totalwait = numTreated + Room->Wating()*10080;
 		cout << "Average vist time: "<<(Room->get_total_wait()/Totalwait)*20;
+		cout << endl;
+		int numPatiants = Room->getNumPatiants();
+		cout << "Number of Patients: ";
+		cout << numPatiants << endl;
 	}
 };
 

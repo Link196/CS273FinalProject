@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="a3b3d95e-0ec6-45af-bccb-bba61a96e6f5" name="UMLClassDiagram1" linkedPackageId="cbe61372-445a-405d-a0b5-26cc029a2b66" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="a3b3d95e-0ec6-45af-bccb-bba61a96e6f5" name="UMLClassDiagram1" linkedPackageId="cbe61372-445a-405d-a0b5-26cc029a2b66" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <appliedStereotypesInternal>
     <stereotypeInstance Id="20630586-d51b-4785-84a5-7017f6e7f642" name="namespace" profile="CSharpProfile">
       <elementDefinition Id="ec6acca8-2682-4de8-b765-15593b8245f8" />
@@ -233,6 +233,22 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="f9afb4c6-dab3-47c8-aa18-fb731d3ab289" />
           </association>
+          <association Id="2ab87098-2572-4a55-a5c0-9d1033abc4c2" isDerived="false" sourceEndRoleName="Emergency Room" targetEndRoleName="InjuryQueue" isLeaf="false" isAbstract="false">
+            <classMoniker Id="1a82bf1b-a644-48d5-b71e-6de470359e82" LastKnownName="InjuryQueue" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bac163f7-012e-45b5-aaa9-65a1894d7ddb" name="Emergency Room" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8c7ebd29-8feb-4b87-b4d1-c7ca1701f1ec" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ba64543b-3532-4866-915a-945a25731581" name="InjuryQueue" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="5a0c88f6-4dd8-43f9-9851-221924bf93c3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c0c33703-1fc3-492b-8893-7e588b7ec17a" />
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property Id="5ada423b-d2f6-46a7-9632-613913dc81eb" name="EnterQueue *enter" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -374,6 +390,22 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="aa94de27-da5f-4908-86b1-7adf32301ff7" />
+          </association>
+          <association Id="299a9796-ca74-4b3f-a63c-1b336688f1b4" isDerived="false" sourceEndRoleName="Caregiver" targetEndRoleName="Nurse" isLeaf="false" isAbstract="false">
+            <classMoniker Id="df89c09b-b0fd-4040-a49b-82f44abb8ddf" LastKnownName="Nurse" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0f573fa6-967b-4d0b-8606-5df43f35a09f" name="Caregiver" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8e880fb1-1260-441f-8be4-d57b80b649c0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="657aab47-6866-490e-ab25-6007ee3bd241" name="Nurse" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4a08c6f8-6916-48de-9ec8-3bc72c80bc05" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1c6c33ec-d555-4a38-b090-0c13c1cee02f" />
           </association>
         </targetEnds>
         <ownedAttributesInternal>
@@ -534,59 +566,6 @@
           </operation>
           <operation Id="d4591ae0-afe5-46a5-aff0-75635cfa6a40" name="void showStats" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="f3ad42ae-f7d2-477b-8f22-24d2d8a00736" />
-          </operation>
-        </ownedOperationsInternal>
-      </class>
-    </logicalClassDesignerModelHasTypes>
-    <logicalClassDesignerModelHasTypes>
-      <class Id="d18754fa-67d3-45ee-9028-2460e7a3458b" name="EnterQueue" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="a8f34a49-d529-4f89-8d87-b10d7362a3eb" />
-        <ownedAttributesInternal>
-          <property Id="a86eb9a9-0d84-41a8-98ed-431e42e6f113" name="double arrival_rate" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="32d6865b-85c9-4b6f-8008-d178f72848b7" />
-          </property>
-          <property Id="61c75acf-8f7e-40dc-8b43-78ce26c78155" name="queue&lt;Patients*&gt; the_queue" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="f578521e-8b56-4431-ae43-db0595eed1f7" />
-          </property>
-          <property Id="ec2c87fc-ff30-4844-bfc6-d48ddbb8aa24" name="int total_wait" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="eead17d7-3e4d-4a31-a6f8-0f4023e403ba" />
-          </property>
-          <property Id="770419b1-0c02-4b03-b79e-9771ae3803c1" name="int num_served" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="b52e0127-0f5e-4e08-bcc2-c24838e250a2" />
-          </property>
-          <property Id="3f213180-723a-460e-b71a-f8256df09890" name="friend class Injury" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="e9e4b231-a68b-47df-84cd-a6a934e4d33f" />
-          </property>
-        </ownedAttributesInternal>
-        <ownedOperationsInternal>
-          <operation Id="b81fe394-eed4-4f34-9925-77398118a3d5" name="EnterQueue" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="7d57b63b-0048-460c-bf53-c5c78fa6cc5e" />
-          </operation>
-          <operation Id="4d5ad681-018b-48f7-b16a-1ba039430708" name="void set_arrival_rate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="2e7f9224-6726-4ae6-b303-a3bb48aae6c8" />
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter Id="001f4996-09fc-4102-a10f-bb082a87f4db" name="double" direction="In" isUnique="false">
-                  <elementDefinition Id="bfe2352f-d765-4121-a284-30b5abede663" />
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation Id="709c8d2c-09e9-4970-b28b-070cae2e3f62" name="int get_total_wait" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="87266cfb-f1a2-47ee-a73a-dee3e6898049" />
-          </operation>
-          <operation Id="ddbf2abf-9185-4f0c-83f6-8e1917ba9325" name="int get_num_served" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="1ab4e914-be83-495f-869d-a7e088ad7edb" />
-          </operation>
-          <operation Id="50557f84-48bf-4e0a-a8b4-6ec62db78c2b" name="void update" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="8df8fd9e-048e-482d-9a0a-652f0a3aa9ed" />
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter Id="c89992be-dd07-4e32-97ca-295ba82e42f6" name="int" direction="In" isUnique="false">
-                  <elementDefinition Id="0bdcfc6a-ee1f-4bd6-8a40-3eb1bc188393" />
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
           </operation>
         </ownedOperationsInternal>
       </class>

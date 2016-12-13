@@ -13,6 +13,7 @@
 #include <vector>
 
 using namespace std;
+Random random;
 
 class EmergencyRoom
 {
@@ -21,11 +22,11 @@ private:
 	HighInjuryQueue Highinjury;
 	LowQueue Lowinjury;
 	vector<Caregiver*> workers;
-	int numPatients;
+	int numPatients=0;
 	int arrival = 0;
-	double arrival_rate;            // plane arrival rate per minute
+	double arrivalRate=0.0;            // plane arrival rate per minute
 	std::queue<Patients *> the_queue;  // queue of planes in the landing queue
-	double total_wait = 0;;  // total accumulated wait time in the landing queue
+	double total_wait = 0;  // total accumulated wait time in the landing queue
 	int num_served=0;  // number of planes served through the landing queue
 
 public:
@@ -35,14 +36,20 @@ public:
 		return num_served;
 	}
 	void set_arrival_rate(double arrival_rate) {
-		this->arrival_rate = arrival_rate;
+		arrivalRate = arrival_rate;
 	}
 
 	double get_total_wait() {
 		return total_wait;
 	}
-
-
+	double getArrivalRate()
+	{
+		return arrivalRate;
+	}
+	int getNumPatiants()
+	{
+		return numPatients;
+	}
 	/*void update(int clock)
 	{
 		Patients *p;
@@ -67,13 +74,14 @@ public:
 	}
 	void newPatient(int clock)
 	{
+		numPatients++;
 		Patients patient(clock);
 		patient.injury();
 		if (patient.getInjury() <= 10)
 			Lowinjury.setLow(patient);
 		else if (patient.getInjury() > 10)
 			Highinjury.setHigh(patient);
-		numPatients++;
+		
 	}
 	void Treat(int clock, Caregiver *worker)
 	{
@@ -83,19 +91,19 @@ public:
 		}
 	}
 
-	void update(int clock)
+	void update(int& clock)
 	{
 		if (clock == 0) {
 			newPatient(clock);
 			total_wait = (total_wait + clock);
 		}
-		else if (clock - arrival >= arrival_rate)
+		 if (clock-arrival >= arrivalRate)
 		{
 			newPatient(clock);
 			arrival = clock;
 			total_wait = (total_wait + clock);
 		}
-		for (int i = 0; i < workers.size(); i++)
+		for (int i =0; i < workers.size(); i++)
 		{
 			if (workers[i]->withPatient())
 				Treat(clock, workers[i]);
